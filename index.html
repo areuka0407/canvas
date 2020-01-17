@@ -6,10 +6,33 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Canvas</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="ColorPicker/css/picker.css">
+
+    <script src="js/helper.js"></script>
     <script src="js/Canvas.js" type="text/javascript"></script>
+    <script src="ColorPicker/js/ColorPicker.js"></script>
 </head>
 <body>
-    <aside></aside>
+    <header>
+
+    </header>
+    <aside>
+        <div>
+            <div class="tool-bar">
+                <button id="pen" class="tool"></button>
+                <button id="straight" class="tool"></button>
+                <button id="curve" class="tool"></button>
+                <button id="eraser" class="tool"></button>
+                <button id="circle" class="tool"></button>
+                <button id="polygon" class="tool"></button>
+                <button id="paint" class="tool"></button>
+            </div>
+            <div class="color-bar">
+                <div id="color-background" class="color-picker"></div>         
+                <div id="color-border" class="color-picker"></div>
+            </div>
+        </div>
+    </aside>
     <canvas></canvas>
 </body>
 </html>

@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+.picker {
+    position: absolute; z-index: 100000;
+    width: 360px; height: 320px;
+    box-shadow: 0 0 10px 5px #00000020;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    opacity: 0; transition: opacity 0.3s, transform 0.3s;
+    transform: translateY(-10px);
+    padding: 10px; 
+    display: flex;
+    align-items: center;
+}
+
+.picker .main-color {
+    position: relative;
+    width: 300px; height: 300px;
+    border: 1px solid #ddd;
+}
+
+.picker .main-color canvas {
+    position: absolute; left: 0; top: 0;
+}
+
+.picker .sub-color {
+    position: relative;
+    margin-left: 10px;
+    width: 30px; height: 300px;
+    border: 1px solid #ddd;
+}
+
+.picker .sub-color canvas {
+    position: absolute; left: 0; top: 0;
+}
