@@ -11,9 +11,30 @@ html, body { overflow: hidden; }
  * 각종 설정 헤더
  */
 header {
-    width: 100%; height: 80px;
+    padding-left: 100px;
+    width: 100%; height: 50px;
     position: fixed; top: 0; left: 0;
     background-color: #3b3b3b;
+}
+
+header label {
+    display: inline-block;
+    padding-left: 20px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 0.8em;
+    color: #fff;
+}
+
+header select {
+    display: inline-block;
+    height: 40px;
+    margin: 5px 10px 5px;
+    border: 1px solid #5F5F5F;
+    background: #454545;
+    padding: 0 10px;
+    border-radius: 5px;
+    color: #fff;
 }
 
 
@@ -49,6 +70,10 @@ aside .tool-bar .tool {
     background-size: 30px 30px;
     background-position: center center;
     background-repeat: no-repeat;
+}
+
+aside .tool-bar .tool.active {
+    background-color: #303030;
 }
 
 /* 도구 아이콘 */
@@ -95,6 +120,6 @@ aside .color-bar {
 }
 
 
-canvas {
-    margin-left: 100px;
+#viewport {
+    margin-top: 50px; margin-left: 100px;
 }

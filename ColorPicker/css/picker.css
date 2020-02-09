@@ -4,8 +4,8 @@
     position: absolute; z-index: 100000;
     width: 360px; height: 320px;
     box-shadow: 0 0 10px 5px #00000020;
-    border: 1px solid #ddd;
-    background-color: #fff;
+    border: 1px solid #464545;
+    background-color: #535353;
     opacity: 0; transition: opacity 0.3s, transform 0.3s;
     transform: translateY(-10px);
     padding: 10px; 
@@ -16,20 +16,62 @@
 .picker .main-color {
     position: relative;
     width: 300px; height: 300px;
-    border: 1px solid #ddd;
+    border: 1px solid #464545;
+    overflow: hidden;
 }
 
 .picker .main-color canvas {
     position: absolute; left: 0; top: 0;
+    width: 100%; height: 100%;
 }
+
+.picker .main-color .cursor {
+    position: absolute; left: 0; top: 0;
+    width: 10px; height: 10px; 
+    background-color: transparent;
+    z-index: 1000; pointer-events: none;
+}
+
+.picker .main-color .cursor::before {
+    content: '';
+    position: absolute; left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%; height: 100%;
+    border-radius: 50%; border: 2px solid #000;
+}
+
+.picker .main-color .cursor.white::before { border-color: #fff; }
 
 .picker .sub-color {
     position: relative;
     margin-left: 10px;
     width: 30px; height: 300px;
-    border: 1px solid #ddd;
+    border: 1px solid #464545;
 }
 
 .picker .sub-color canvas {
     position: absolute; left: 0; top: 0;
+    width: 100%; height: 100%;
+}
+
+.picker .sub-color .cursor {
+    position: absolute; left: 0; top: 0;
+    width: 100%; height: 3px;
+    z-index: 1000; pointer-events: none;
+}
+
+.picker .sub-color .cursor::before {   
+    content: '';
+    position: absolute; left: -5px; top: -5px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: transparent transparent transparent #fff;
+}
+
+.picker .sub-color .cursor::after {
+    content: '';
+    position: absolute; right: -5px; top: -5px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: transparent #fff transparent transparent;
 }

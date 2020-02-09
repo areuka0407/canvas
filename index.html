@@ -9,12 +9,22 @@
     <link rel="stylesheet" href="ColorPicker/css/picker.css">
 
     <script src="js/helper.js"></script>
+    <script src="js/Pen.js"></script>
     <script src="js/Canvas.js" type="text/javascript"></script>
     <script src="ColorPicker/js/ColorPicker.js"></script>
 </head>
 <body>
     <header>
-
+        <div class="form-group">
+            <label for="lineWidth">선 굵기</label>
+            <select name="lineWidth" id="lineWidth" class="option">
+                <option value="1">1px</option>
+                <option value="2">2px</option>
+                <option value="3">3px</option>
+                <option value="4">4px</option>
+                <option value="5">5px</option>
+            </select>
+        </div>
     </header>
     <aside>
         <div>
@@ -33,6 +43,8 @@
             </div>
         </div>
     </aside>
-    <canvas></canvas>
+    <div id="viewport">
+
+    </div>
 </body>
 </html>
